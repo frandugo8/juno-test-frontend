@@ -1,0 +1,45 @@
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+
+  &__label {
+    margin-bottom: 3px;
+    letter-spacing: .5px;
+  }
+
+  &__content {
+    padding: 10px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: hsl(227deg 12% 85%);
+    border-radius: 3px;
+    border: 3px solid hsl(227deg 12% 85%);
+    outline: none;
+
+    &___errors {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-color: hsl(358deg 100% 62%);
+    }
+
+    &:focus {
+      background-color: white;
+
+      &___errors {
+        border-color: hsl(358deg 100% 62%);
+      }
+    }
+  }
+
+  &__validationError {
+    background-color: hsl(358deg 100% 62%);
+    font-size: 12px;
+    padding: 2px 8px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}

@@ -1,0 +1,58 @@
+
+.submit {
+  width: 100%;
+  padding: 10px 20px;
+  height: 45px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: black;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(139deg 59% 55%);
+  cursor: pointer;
+  border: none;
+  position: relative;
+
+  &:hover, &___isLoading {
+    background-color: hsl(140deg 59% 35%);
+    color: white;
+  }
+
+  .spinner {
+    animation: rotate 2s linear infinite;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 11px;
+    left: 20px;
+  
+    &__path {
+      stroke: #ffffff;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+}
